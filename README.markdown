@@ -8,7 +8,7 @@ The development environment is a simple Node.js server managed by Yeoman. If you
 install these tools first:
 
 * [Node](http://nodejs.org/download/)
-* [Yeoman](http://yeoman.io/gettingstarted.html)
+* [Yeoman](http://yeoman.io/learning/index.html)
 
 
 ## Running
