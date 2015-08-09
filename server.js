@@ -55,8 +55,14 @@ passport.deserializeUser(function(user, done) {
   Setup the Express app
 */
 app.use(cookieParser('cookie_secret_shh')); // Change for production apps
-app.use(bodyParser());
-app.use(session({secret: 'session_secret_shh'})); // Change for production apps
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(session({
+  secret: 'session_secret_shh', // Change for production apps
+  resave: true,
+  saveUninitialized: false
+}));
 app.use(passport.initialize());
 app.use(passport.session());
 
