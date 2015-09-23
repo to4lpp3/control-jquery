@@ -8,7 +8,7 @@ The development environment is a simple Node.js server managed by Yeoman. If you
 install these tools first:
 
 * [Node](http://nodejs.org/download/)
-* [Yeoman](http://yeoman.io/gettingstarted.html)
+* [Yeoman](http://yeoman.io/learning/index.html)
 
 ## Prerequisite
 In order to run this example you must first create a client in the Nest Developer portal (https://developer.nest.com/clients).  The client should be created with the following required attributes:
