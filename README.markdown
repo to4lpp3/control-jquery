@@ -10,6 +10,13 @@ install these tools first:
 * [Node](http://nodejs.org/download/)
 * [Yeoman](http://yeoman.io/gettingstarted.html)
 
+## Prerequisite
+In order to run this example you must first create a client in the Nest Developer portal (https://developer.nest.com/clients).  The client should be created with the following required attributes:
+
+OAuth Redirect URI:  http://localhost:8080/auth/nest/callback
+Permissions:  Thermostat read/write
+
+All other attributes values are not specific and can be determined by the developer.
 
 ## Running
 To install required Bower components and Node modules, simply type:
