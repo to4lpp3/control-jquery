@@ -39,9 +39,9 @@ if (nestToken) { // Simple check for token
   the following parameters:
 
   * hvac_mode (C or F)
-  * temperature_scale (range, heat, cool, or off)
+  * temperature_scale (heat-cool, heat, cool, or off)
 
-  When hvac_mode is 'range' we display both the low and the high setpoints like:
+  When hvac_mode is 'heat-cool' we display both the low and the high setpoints like:
 
     68 • 80° F
 
@@ -64,7 +64,7 @@ function updateTemperatureDisplay (thermostat) {
 
   // For Heat • Cool mode, we display a range of temperatures
   // we support displaying but not changing temps in this mode
-  if (thermostat.hvac_mode === 'range') {
+  if (thermostat.hvac_mode === 'heat-cool') {
     $('#target-temperature .temp').text(
       thermostat['target_temperature_low_' + scale] + ' • ' +
       thermostat['target_temperature_high_' + scale]
@@ -77,6 +77,7 @@ function updateTemperatureDisplay (thermostat) {
   // Otherwise just display the target temperature
   } else {
     $('#target-temperature .temp').text(thermostat['target_temperature_' + scale] + '°');
+    $('#heating-up-button, #heating-down-button, #cooling-up-button, #cooling-down-button').hide();
   }
 
   // Update ambient temperature display
@@ -183,7 +184,7 @@ $('#down-button').on('click', function () {
   or 0.5 degrees C
 
 */
-$('#up-button-heat').on('click', function () {
+$('#heating-up-button-heat').on('click', function () {
   var scale = thermostat.temperature_scale,
       adjustment = scale === 'F' ? +1 : +0.5;
   adjustTemperature(adjustment, scale, 'heat');
@@ -195,7 +196,7 @@ $('#up-button-heat').on('click', function () {
   or 0.5 degrees C
 
 */
-$('#down-button-heat').on('click', function () {
+$('#heating-down-button').on('click', function () {
   var scale = thermostat.temperature_scale,
       adjustment = scale === 'F' ? -1 : -0.5;
   adjustTemperature(adjustment, scale, 'heat');
@@ -207,7 +208,7 @@ $('#down-button-heat').on('click', function () {
   or 0.5 degrees C
 
 */
-$('#up-button-cool').on('click', function () {
+$('#cooling-up-button').on('click', function () {
   var scale = thermostat.temperature_scale,
       adjustment = scale === 'F' ? +1 : +0.5;
   adjustTemperature(adjustment, scale, 'cool');
@@ -219,7 +220,7 @@ $('#up-button-cool').on('click', function () {
   or 0.5 degrees C
 
 */
-$('#down-button-cool').on('click', function () {
+$('#cooling-down-button').on('click', function () {
   var scale = thermostat.temperature_scale,
       adjustment = scale === 'F' ? -1 : -0.5;
   adjustTemperature(adjustment, scale, 'cool');
