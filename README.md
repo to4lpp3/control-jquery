@@ -4,21 +4,24 @@ A simple thermostat control application that demonstrates how to access the Nest
 application.
 
 ## Requirements
-The development environment is a simple Node.js server managed by Yeoman. If you don't have them already
-install these tools first:
 
-* [Node](http://nodejs.org/download/)
-* [Yeoman](http://yeoman.io/learning/index.html)
+The development environment is a simple Node.js server managed by Yeoman.
+If you don't have them already install these tools first:
+
+* [Node][node]
+* [Yeoman][yeoman]
 
 ## Prerequisite
-In order to run this example you must first create a client in the Nest Developer portal (https://developer.nest.com/clients).  The client should be created with the following required attributes:
 
-OAuth Redirect URI:  http://localhost:8080/auth/nest/callback
-Permissions:  Thermostat read/write
+In order to run this example you must first create a client in the [Nest Developer portal][nest-dev-portal]. The client should be created with the following required attributes:
+
+OAuth Redirect URI: `http://localhost:8080/auth/nest/callback`
+Permissions: Thermostat read/write
 
 All other attributes values are not specific and can be determined by the developer.
 
 ## Running
+
 To install required Bower components and Node modules, simply type:
 
     $ bower install
@@ -35,22 +38,21 @@ And finally, use Grunt to start the server:
 
 Then open http://localhost:8080 in your browser and you will be walked through the authentication process.
 
+## Contributing
+
+Contributions are always welcome and highly encouraged.
+
+See [CONTRIBUTING][contrib] for more information on how to get started.
+
 ## License
 
-LCDBOLD
-Copyright © 1999 by Samuel Reynolds. See /app/fonts/LCDBOLD/readme.txt
+LCDBOLD - Standard Font License - Copyright 1999 by Samuel Reynolds. See [`app/fonts/LCDBOLD/readme.txt`][font-license] for more information.
 
-control-jquery
-Copyright 2014 Nest Labs Inc. All Rights Reserved.
+control-jquery - Apache 2.0 - See [LICENSE][license] for more information.
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+[node]: https://nodejs.org/en/download/
+[yeoman]: http://yeoman.io/learning/index.html
+[nest-dev-portal]: https://developer.nest.com/clients
+[contrib]: CONTRIBUTING.md
+[license]: LICENSE
+[font-license]: https://github.com/nestlabs/control-jquery/blob/master/app/fonts/LCDBOLD/readme.txt
